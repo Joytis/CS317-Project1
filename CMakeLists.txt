@@ -9,8 +9,8 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/include/
 )
 
-add_executable(Project1 ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
-add_custom_command(TARGET assignment3 POST_BUILD
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${PROJECT_SOURCE_DIR}/inventory $<TARGET_FILE_DIR:assignment3>/inventory)
+        ${PROJECT_SOURCE_DIR}/inventory $<TARGET_FILE_DIR:${PROJECT_NAME}>/inventory)
