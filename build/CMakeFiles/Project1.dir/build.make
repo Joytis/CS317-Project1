@@ -57,9 +57,57 @@ include CMakeFiles/Project1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Project1.dir/flags.make
 
+CMakeFiles/Project1.dir/src/Matrix.cpp.o: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/src/Matrix.cpp.o: ../src/Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/src/Matrix.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/src/Matrix.cpp.o -c /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/Matrix.cpp
+
+CMakeFiles/Project1.dir/src/Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/src/Matrix.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/Matrix.cpp > CMakeFiles/Project1.dir/src/Matrix.cpp.i
+
+CMakeFiles/Project1.dir/src/Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/src/Matrix.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/Matrix.cpp -o CMakeFiles/Project1.dir/src/Matrix.cpp.s
+
+CMakeFiles/Project1.dir/src/Matrix.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project1.dir/src/Matrix.cpp.o.requires
+
+CMakeFiles/Project1.dir/src/Matrix.cpp.o.provides: CMakeFiles/Project1.dir/src/Matrix.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/Matrix.cpp.o.provides.build
+.PHONY : CMakeFiles/Project1.dir/src/Matrix.cpp.o.provides
+
+CMakeFiles/Project1.dir/src/Matrix.cpp.o.provides.build: CMakeFiles/Project1.dir/src/Matrix.cpp.o
+
+
+CMakeFiles/Project1.dir/src/comparator.cpp.o: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/src/comparator.cpp.o: ../src/comparator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project1.dir/src/comparator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/src/comparator.cpp.o -c /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.cpp
+
+CMakeFiles/Project1.dir/src/comparator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/src/comparator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.cpp > CMakeFiles/Project1.dir/src/comparator.cpp.i
+
+CMakeFiles/Project1.dir/src/comparator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/src/comparator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.cpp -o CMakeFiles/Project1.dir/src/comparator.cpp.s
+
+CMakeFiles/Project1.dir/src/comparator.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project1.dir/src/comparator.cpp.o.requires
+
+CMakeFiles/Project1.dir/src/comparator.cpp.o.provides: CMakeFiles/Project1.dir/src/comparator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/comparator.cpp.o.provides.build
+.PHONY : CMakeFiles/Project1.dir/src/comparator.cpp.o.provides
+
+CMakeFiles/Project1.dir/src/comparator.cpp.o.provides.build: CMakeFiles/Project1.dir/src/comparator.cpp.o
+
+
 CMakeFiles/Project1.dir/src/main.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project1.dir/src/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/src/main.cpp.o -c /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/main.cpp
 
 CMakeFiles/Project1.dir/src/main.cpp.i: cmake_force
@@ -83,15 +131,19 @@ CMakeFiles/Project1.dir/src/main.cpp.o.provides.build: CMakeFiles/Project1.dir/s
 
 # Object files for target Project1
 Project1_OBJECTS = \
+"CMakeFiles/Project1.dir/src/Matrix.cpp.o" \
+"CMakeFiles/Project1.dir/src/comparator.cpp.o" \
 "CMakeFiles/Project1.dir/src/main.cpp.o"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
 
+Project1: CMakeFiles/Project1.dir/src/Matrix.cpp.o
+Project1: CMakeFiles/Project1.dir/src/comparator.cpp.o
 Project1: CMakeFiles/Project1.dir/src/main.cpp.o
 Project1: CMakeFiles/Project1.dir/build.make
 Project1: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Project1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project1.dir/link.txt --verbose=$(VERBOSE)
 	/usr/local/Cellar/cmake/3.7.0/bin/cmake -E copy_directory /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/inventory /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/build/inventory
 
@@ -100,6 +152,8 @@ CMakeFiles/Project1.dir/build: Project1
 
 .PHONY : CMakeFiles/Project1.dir/build
 
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/src/Matrix.cpp.o.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/src/comparator.cpp.o.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/src/main.cpp.o.requires
 
 .PHONY : CMakeFiles/Project1.dir/requires

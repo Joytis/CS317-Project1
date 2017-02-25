@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/comparator.hpp
+includes.hpp
+../include/includes.hpp
+
+../include/dbg.hpp
+stdio.h
+-
+errno.h
+-
+string.h
+-
+
+../include/includes.hpp
+dbg.hpp
+../include/dbg.hpp
+
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/Matrix.cpp
+
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.cpp
+comparator.hpp
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.hpp
+
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/main.cpp
+iostream
+-
+includes.hpp
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/includes.hpp
+comparator.hpp
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.hpp
+

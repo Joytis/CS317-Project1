@@ -123,6 +123,60 @@ Project1/fast:
 	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/build
 .PHONY : Project1/fast
 
+src/Matrix.o: src/Matrix.cpp.o
+
+.PHONY : src/Matrix.o
+
+# target to build an object file
+src/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/Matrix.cpp.o
+.PHONY : src/Matrix.cpp.o
+
+src/Matrix.i: src/Matrix.cpp.i
+
+.PHONY : src/Matrix.i
+
+# target to preprocess a source file
+src/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/Matrix.cpp.i
+.PHONY : src/Matrix.cpp.i
+
+src/Matrix.s: src/Matrix.cpp.s
+
+.PHONY : src/Matrix.s
+
+# target to generate assembly for a file
+src/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/Matrix.cpp.s
+.PHONY : src/Matrix.cpp.s
+
+src/comparator.o: src/comparator.cpp.o
+
+.PHONY : src/comparator.o
+
+# target to build an object file
+src/comparator.cpp.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/comparator.cpp.o
+.PHONY : src/comparator.cpp.o
+
+src/comparator.i: src/comparator.cpp.i
+
+.PHONY : src/comparator.i
+
+# target to preprocess a source file
+src/comparator.cpp.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/comparator.cpp.i
+.PHONY : src/comparator.cpp.i
+
+src/comparator.s: src/comparator.cpp.s
+
+.PHONY : src/comparator.s
+
+# target to generate assembly for a file
+src/comparator.cpp.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/src/comparator.cpp.s
+.PHONY : src/comparator.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Project1"
+	@echo "... src/Matrix.o"
+	@echo "... src/Matrix.i"
+	@echo "... src/Matrix.s"
+	@echo "... src/comparator.o"
+	@echo "... src/comparator.i"
+	@echo "... src/comparator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
