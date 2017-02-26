@@ -65,8 +65,9 @@ int Matrix::quicksort_partition(matrix_data* d, int left, int right)
 {
 	i_iter  = left + 1;
 	j_iter = right;
+	// Flip-flop these function pointers around!
 	first = &Matrix::quicksort_partition_icomp;
-	second = &Matrix::quicksort_partition_icomp;
+	second = &Matrix::quicksort_partition_jcomp;
 
 	while(i_iter <= j_iter) {
 		if((this->*first)(d, left)) {}
@@ -90,6 +91,7 @@ int Matrix::quicksort_partition(matrix_data* d, int left, int right)
 bool Matrix::quicksort_partition_icomp(matrix_data* d, int left)
 {
 	bool ret = comp.leq((*d)[i_iter], (*d)[left]);
+	// If this is true, set the method to first as pseudo-cache
 	if(ret){
 		i_iter++;
 		first = &Matrix::quicksort_partition_icomp;
@@ -101,6 +103,7 @@ bool Matrix::quicksort_partition_icomp(matrix_data* d, int left)
 bool Matrix::quicksort_partition_jcomp(matrix_data* d, int left)
 {
 	bool ret = comp.geq((*d)[j_iter], (*d)[left]);
+	// If this is true, set the method to first as pseudo-cache
 	if(ret){
 		j_iter--;
 		first = &Matrix::quicksort_partition_jcomp;

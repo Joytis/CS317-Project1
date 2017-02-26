@@ -9,6 +9,9 @@
 
 using matrix_data = std::vector<int>;
 
+// This class is kind of silly and non-functional in a larger project. 
+// If we use this again, I'll seperate it into a generic quicksort class
+// and a matrix class. This should work, though, albeit in an ugly way.
 class Matrix 
 {
 private:
