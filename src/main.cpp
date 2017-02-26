@@ -13,8 +13,8 @@ int main(int argc, char ** argv)
 	Comparator<int> comp;
 	std::string path(argv[1]);
 	Matrix matrix;
-	matrix.read_from_file(path);
 
-	cprint("2 < 4: %d", comp.leq(2, 4));
-	cprint("compare_count: %d", Comparator<int>::getCount());
+	matrix.read_from_file(path);
+	matrix.sort_method1();
+	// matrix.print_matrix();
 }

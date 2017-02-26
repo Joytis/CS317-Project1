@@ -10,7 +10,7 @@ private:
 
 public:
 	bool leq(T lhs, T rhs);
-	bool gre(T lhs, T rhs);
+	bool geq(T lhs, T rhs);
 	static int getCount() { return compare_count; }
 	static void resetCount() { compare_count = 0; }
 };
