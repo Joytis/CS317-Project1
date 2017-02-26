@@ -63,50 +63,48 @@ void Matrix::quicksort(matrix_data* d, int left, int right)
 
 int Matrix::quicksort_partition(matrix_data* d, int left, int right)
 {
-	int i  = left + 1;
-	int j = right;
+	i_iter  = left + 1;
+	j_iter = right;
 	first = &Matrix::quicksort_partition_icomp;
 	second = &Matrix::quicksort_partition_icomp;
 
-	while(i <= j) {
-		if(comp.leq((*d)[i], (*d)[left])){
-			i++;
-		}
-		else if(comp.geq((*d)[j], (*d)[left])) {
-			j--;
-		}
+	while(i_iter <= j_iter) {
+		if((this->*first)(d, left)) {}
+		else if((this->*second)(d, left)) {}
 		else {
-			int temp = (*d)[i];
-			(*d)[i] = (*d)[j];
-			(*d)[j] = temp;
-			i++;
-			j--;
+			int temp = (*d)[i_iter];
+			(*d)[i_iter] = (*d)[j_iter];
+			(*d)[j_iter] = temp;
+			i_iter++;
+			j_iter--;
 		}
 	}
 
 	int temp = (*d)[left];
-	(*d)[left] = (*d)[j];
-	(*d)[j] = temp;
+	(*d)[left] = (*d)[j_iter];
+	(*d)[j_iter] = temp;
 
-	return j;
+	return j_iter;
 }
 
-bool Matrix::quicksort_partition_icomp(int lhs, int rhs)
+bool Matrix::quicksort_partition_icomp(matrix_data* d, int left)
 {
-	bool ret = comp.leq(lhs, rhs);
+	bool ret = comp.leq((*d)[i_iter], (*d)[left]);
 	if(ret){
 		i_iter++;
 		first = &Matrix::quicksort_partition_icomp;
+		second = &Matrix::quicksort_partition_jcomp;
 	}
 	return ret;
 }
 
-bool Matrix::quicksort_partition_jcomp(int lhs, int rhs)
+bool Matrix::quicksort_partition_jcomp(matrix_data* d, int left)
 {
-	bool ret = comp.geq(lhs, rhs);
+	bool ret = comp.geq((*d)[j_iter], (*d)[left]);
 	if(ret){
-		j_iter++;
+		j_iter--;
 		first = &Matrix::quicksort_partition_jcomp;
+		second = &Matrix::quicksort_partition_icomp;
 	}
 	return ret;
 }
