@@ -22,7 +22,21 @@ string.h
 dbg.hpp
 ../include/dbg.hpp
 
+../include/matrix.hpp
+iostream
+-
+fstream
+-
+vector
+-
+includes.hpp
+../include/includes.hpp
+comparator.hpp
+../include/comparator.hpp
+
 /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/Matrix.cpp
+matrix.hpp
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/matrix.hpp
 
 /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.cpp
 comparator.hpp
@@ -35,4 +49,6 @@ includes.hpp
 /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/includes.hpp
 comparator.hpp
 /Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/comparator.hpp
+matrix.hpp
+/Users/Clark/Dropbox/School/Spring2017/CS317/Projects/Project1/src/matrix.hpp
 

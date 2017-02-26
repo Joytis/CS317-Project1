@@ -100,8 +100,8 @@ log_err("N/A" ,                                                                 
         ##__VA_ARGS__)
 
 #define debug(A, M, ...) if(A){ log_info(M, ##__VA_ARGS__); } else{}
-// #define cprint(M, ...) debug(true, M, ...)
 
+#define cprint(M, ...) debug(1, M, ##__VA_ARGS__)
 
 #else
 #define debug(A, M, ...)
