@@ -27,60 +27,96 @@ void Matrix::read_from_file(std::string path)
 
 void Matrix::sort_method1() 
 {
-	quicksort(0, data.size() - 1);
+	quicksort(&data, 0, data.size() - 1);
 	output_to_file("cc0032_1.txt");
 }
 
 void Matrix::sort_method2() 
 {
+	// Quicksort rows
+	for(int i = 0; i < rows; i++) {
+		quicksort(&data, (i * cols), (i * cols) + (cols - 1));
+	}
 
+	// Quicksort cols
+	for(int i = 0; i < cols; i++) {
+		matrix_data temp(rows);
+		for(int j = 0; j < rows; j++) {
+			temp[j] = data[(j * cols) + i];
+		}
+		quicksort(&temp, 0, temp.size());
+		for(int j = 0; j < rows; j++) {
+			data[(j * cols) + i] = temp[j];
+		}
+	}
+	output_to_file("cc0032_2.txt");
 }
 
-void Matrix::quicksort(int left, int right)
+void Matrix::quicksort(matrix_data* d, int left, int right)
 {
 	if(left < right) {
-		int pivot = quicksort_partition(left, right);
-		quicksort(left, pivot - 1);
-		quicksort(pivot + 1, right);
+		int pivot = quicksort_partition(d, left, right);
+		quicksort(d, left, pivot - 1);
+		quicksort(d, pivot + 1, right);
 	}
 }
 
-int Matrix::quicksort_partition(int left, int right)
+int Matrix::quicksort_partition(matrix_data* d, int left, int right)
 {
-	int i = left + 1;
+	int i  = left + 1;
 	int j = right;
+	first = &Matrix::quicksort_partition_icomp;
+	second = &Matrix::quicksort_partition_icomp;
 
 	while(i <= j) {
-		if(comp.leq(data[i], data[left])){
+		if(comp.leq((*d)[i], (*d)[left])){
 			i++;
 		}
-		else if(comp.geq(data[j], data[left])) {
+		else if(comp.geq((*d)[j], (*d)[left])) {
 			j--;
 		}
 		else {
-			int temp = data[i];
-			data[i] = data[j];
-			data[j] = temp;
+			int temp = (*d)[i];
+			(*d)[i] = (*d)[j];
+			(*d)[j] = temp;
 			i++;
 			j--;
 		}
 	}
 
-	int temp = data[left];
-	data[left] = data[j];
-	data[j] = temp;
+	int temp = (*d)[left];
+	(*d)[left] = (*d)[j];
+	(*d)[j] = temp;
 
 	return j;
+}
+
+bool Matrix::quicksort_partition_icomp(int lhs, int rhs)
+{
+	bool ret = comp.leq(lhs, rhs);
+	if(ret){
+		i_iter++;
+		first = &Matrix::quicksort_partition_icomp;
+	}
+	return ret;
+}
+
+bool Matrix::quicksort_partition_jcomp(int lhs, int rhs)
+{
+	bool ret = comp.geq(lhs, rhs);
+	if(ret){
+		j_iter++;
+		first = &Matrix::quicksort_partition_jcomp;
+	}
+	return ret;
 }
 
 void Matrix::output_to_file(std::string path) 
 {
 	std::ofstream file(path);
 
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
 			file << data[(i * cols) + j] << " ";
 		}
 		file << "\n";

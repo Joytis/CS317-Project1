@@ -16,5 +16,11 @@ int main(int argc, char ** argv)
 
 	matrix.read_from_file(path);
 	matrix.sort_method1();
-	// matrix.print_matrix();
+	Comparator<int>::resetCount();
+
+	matrix.read_from_file(path);
+	matrix.sort_method2();
+	Comparator<int>::resetCount();
+
+	return 0;
 }
